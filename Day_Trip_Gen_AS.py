@@ -79,11 +79,27 @@ def trip_itinerary():
         if itinery_input == "Yes":
             itinerary_is_found = True
             return chosen_itinerary
+        
 
 
 itinerary_result = trip_itinerary()
 
+
+
 # (10 points): As a user, I want to be able to confirm that my day trip is “complete” once I like all of the random selections. 
+
+def trip_complete():
+    trip_is_compl = False
+    while trip_is_compl == False:
+        compl_itinerary = (itinerary_result)
+        input(f"Do you wish to complete your trip? Yes or No: ")
+        if compl_itinerary == "Yes":
+            print(f"Your trip to {itinerary_result} is complete! Thank you for using Andy's Travel Service!")
+        break 
+            
+
+completed_trip = trip_complete()
+
 
 # (10 points): As a user, I want to display my completed trip in the console. 
 

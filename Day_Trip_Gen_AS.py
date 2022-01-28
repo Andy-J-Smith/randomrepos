@@ -22,8 +22,6 @@ def pick_locations():
             dest_is_found = True
             return chosen_dest
                       
-dest_result = pick_locations()
-
 
 # (5 points): As a user, I want a restaurant to be randomly selected for my day trip.
 
@@ -37,7 +35,7 @@ def pick_eats():
             rest_is_found = True
             return chosen_rest
 
-rest_result = pick_eats()
+
 
 # (5 points): As a user, I want a mode of transportation to be randomly selected for my day trip. 
 
@@ -51,9 +49,6 @@ def pick_mode_trans():
             mode_is_found = True
             return chosen_mode
 
-transp_result = pick_mode_trans()
-
-
 # (5 points): As a user, I want a form of entertainment to be randomly selected for my day trip. 
 
 def pick_entertainment():
@@ -65,8 +60,6 @@ def pick_entertainment():
         if funt_input == "Yes":
             fun_is_found = True
             return chosen_fun
-
-entertain_result = pick_entertainment()
 
 # (15 points): As a user, I want to be able to randomly re-select a destination, restaurant, mode of transportation, and/or form of entertainment if I don’t like one or more of those things. 
 
@@ -80,12 +73,6 @@ def trip_itinerary():
             itinerary_is_found = True
             return chosen_itinerary
         
-
-
-itinerary_result = trip_itinerary()
-
-
-
 # (10 points): As a user, I want to be able to confirm that my day trip is “complete” once I like all of the random selections. 
 
 def trip_complete():
@@ -96,18 +83,16 @@ def trip_complete():
         trip_compl_input = input(f"Do you wish to exit planner? Yes or No: ")
         if trip_compl_input == "Yes":
             trip_is_compl = True        
-            
 
+      
+dest_result = pick_locations()
+rest_result = pick_eats()
+transp_result = pick_mode_trans()
+entertain_result = pick_entertainment()
+itinerary_result = trip_itinerary()
 trip_complete()
 
 
 # (10 points): As a user, I want to display my completed trip in the console. 
 
 # (5 points): As a developer, I want all of my functions to have a Single Responsibility. Remember, each function should do just one thing!
-
-
-
-# Start coding the program first by going from the top of the user stories and working down. Decide how you will:
-# Store the trip options for destinations, restaurants, transportation, and entertainment
-# Get a random element from each of those sets of options
-# Store those random elements to be used elsewhere!

@@ -73,7 +73,7 @@ entertain_result = pick_entertainment()
 def trip_itinerary():
     itinerary_is_found = False
     while itinerary_is_found == False:
-        chosen_itinerary = (dest_result, rest_result, transp_result, entertain_result)
+        chosen_itinerary = (f"Your trip to {dest_result}, eating at {rest_result}, traveling by {transp_result}, while enjoying {entertain_result}")
         print(f"Itinerary: {chosen_itinerary}")
         itinery_input = input("Do you want to keep this selection? Yes or No:  ")
         if itinery_input == "Yes":
@@ -92,13 +92,13 @@ def trip_complete():
     trip_is_compl = False
     while trip_is_compl == False:
         compl_itinerary = (itinerary_result)
-        input(f"Do you wish to complete your trip? Yes or No: ")
-        if compl_itinerary == "Yes":
-            print(f"Your trip to {itinerary_result} is complete! Thank you for using Andy's Travel Service!")
-        break 
+        print(f"{itinerary_result} is complete! Thank you for using Andy's Travel Service!")
+        trip_compl_input = input(f"Do you wish to exit planner? Yes or No: ")
+        if trip_compl_input == "Yes":
+            trip_is_compl = True        
             
 
-completed_trip = trip_complete()
+trip_complete()
 
 
 # (10 points): As a user, I want to display my completed trip in the console. 

@@ -20,8 +20,9 @@ def pick_locations():
         dest_input = input("Do you want to keep this selection? Yes or No:  ")
         if dest_input == "Yes":
             dest_is_found = True
+            return chosen_dest
                       
-pick_locations()
+dest_result = pick_locations()
 
 
 # (5 points): As a user, I want a restaurant to be randomly selected for my day trip.
@@ -34,8 +35,9 @@ def pick_eats():
         rest_input = input("Do you want to keep this selection? Yes or No:  ")
         if rest_input == "Yes":
             rest_is_found = True
+            return chosen_rest
 
-pick_eats()
+rest_result = pick_eats()
 
 # (5 points): As a user, I want a mode of transportation to be randomly selected for my day trip. 
 
@@ -47,8 +49,9 @@ def pick_mode_trans():
         mode_input = input("Do you want to keep this selection? Yes or No:  ")
         if mode_input == "Yes":
             mode_is_found = True
+            return chosen_mode
 
-pick_mode_trans()
+transp_result = pick_mode_trans()
 
 
 # (5 points): As a user, I want a form of entertainment to be randomly selected for my day trip. 
@@ -61,22 +64,24 @@ def pick_entertainment():
         funt_input = input("Do you want to keep this selection? Yes or No:  ")
         if funt_input == "Yes":
             fun_is_found = True
+            return chosen_fun
 
-pick_entertainment()
+entertain_result = pick_entertainment()
 
 # (15 points): As a user, I want to be able to randomly re-select a destination, restaurant, mode of transportation, and/or form of entertainment if I don’t like one or more of those things. 
 
 def trip_itinerary():
     itinerary_is_found = False
     while itinerary_is_found == False:
-        chosen_itinerary = (pick_locations), (pick_eats), (pick_mode_trans), (pick_entertainment)
+        chosen_itinerary = (dest_result, rest_result, transp_result, entertain_result)
         print(f"Itinerary: {chosen_itinerary}")
         itinery_input = input("Do you want to keep this selection? Yes or No:  ")
         if itinery_input == "Yes":
             itinerary_is_found = True
+            return chosen_itinerary
 
 
-trip_itinerary()
+itinerary_result = trip_itinerary()
 
 # (10 points): As a user, I want to be able to confirm that my day trip is “complete” once I like all of the random selections. 
 
